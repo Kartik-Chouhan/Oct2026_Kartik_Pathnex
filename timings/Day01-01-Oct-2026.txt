@@ -1,0 +1,5 @@
+30 min gitcode
+roadmap video done for DevOps
+created repo on github
+created EC2 instance
+
