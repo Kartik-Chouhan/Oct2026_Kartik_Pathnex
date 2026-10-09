@@ -1,5 +1,6 @@
 30 min gitcode
-roadmap video done for DevOps
+2 hours roadmap video done for DevOps
 created repo on github
 created EC2 instance
+1.53 hrs EC2 to Github video
 
