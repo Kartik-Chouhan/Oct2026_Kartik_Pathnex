@@ -1,0 +1,3 @@
+Linux Day01 video completed
+Git and Linux basics/fundamental notes also created
+commited on github
