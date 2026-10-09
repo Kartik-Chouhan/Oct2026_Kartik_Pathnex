@@ -1,3 +1,3 @@
-Linux Day01 video completed
+Linux Day01 video completed - 3.53 hours
 Git and Linux basics/fundamental notes also created
-commited on github
+committed on github
