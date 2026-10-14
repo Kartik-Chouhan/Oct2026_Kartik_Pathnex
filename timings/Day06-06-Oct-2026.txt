@@ -1,0 +1,3 @@
+Done practice for git and linux through chatgpt questions
+AWS videos started after completing git roadmap
+commit done for day06
