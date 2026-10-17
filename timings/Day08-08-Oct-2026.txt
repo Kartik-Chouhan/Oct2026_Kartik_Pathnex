@@ -1,0 +1,4 @@
+completed AWS class2 of 3.35 hr
+learnt about S3, session manager, SCP(Service Control Policy), VPC, route 53
+
+
