@@ -1,2 +1,3 @@
 Today i started AWS-Class3 and Class2 completed.
 learnt about more services of AWS like auto scaling, cloud watch, cloud trail, lambda, auto scaling
+learnt about AWS security services: AWS Shield-DDoS, WAF-HTTP/HTTPS, Guradduty, Inspector
