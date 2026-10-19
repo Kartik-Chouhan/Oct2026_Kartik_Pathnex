@@ -1,0 +1,2 @@
+Learnt about AWS DB services and completed AWS day-4.
+Also, started docker video
