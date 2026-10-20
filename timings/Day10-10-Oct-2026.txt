@@ -1,2 +1,3 @@
 Learnt about AWS DB services and completed AWS day-4.
+AWS - RDS, Aurora, DynamoDB, DMS, EFS
 Also, started docker video
