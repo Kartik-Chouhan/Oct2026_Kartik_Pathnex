@@ -1,0 +1,3 @@
+docker video completed..
+learnt about docker networking, docker image, docker registry, n/w types, 
+volumes etc.
