@@ -1,0 +1,2 @@
+done day-1 kubernetes
+learnt about it's imp components and architecture
