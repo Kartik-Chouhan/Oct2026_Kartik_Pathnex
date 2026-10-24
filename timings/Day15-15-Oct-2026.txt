@@ -1,0 +1,3 @@
+completed day2 K8s..
+done practical - created K8s, learnt about upgrade policies 
+done practical - learnt about tags, common issues of K8s etc
