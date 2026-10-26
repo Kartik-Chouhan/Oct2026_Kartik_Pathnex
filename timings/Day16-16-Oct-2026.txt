@@ -1,0 +1,3 @@
+Day 03 - K8s, created K8s instance using terraform
+done ssh for K8s created by pathnex using ssh pathnex@13.235.62.178
+done class 03 - 3.34 hours
