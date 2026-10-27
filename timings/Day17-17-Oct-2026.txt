@@ -1,0 +1,3 @@
+started day04 K8s video..
+learnt real time troubleshooting of pods and K8s.
+learnt about routing of ingress and about virtual services
