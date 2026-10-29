@@ -1,0 +1,107 @@
+***Linux is an Operating System***
+
+Linux OS is heavily used in web servers, cloud infrastructure, Docker/Kubernetes, Databases etc. Linux/Unix covers almost 92% servers around the 
+world. 
+
+--> Below are some imp cmds and format of the cmds in linux:
+
+command [options] [arguments]
+
+pwd: To show the current dir
+mkdir: to create a dir or folder in a path
+touch: to create an empty file -- e.g(touch notes.txt)
+cat: to display the content of a file
+clear: to clear the terminal screen
+sudo: it stands for superuser do. it allows an authorized user to execute a command with defined privileges, usually as the root user.
+whoami: to display the username(current username)
+cd: to change the directory
+cd .. : to go back in a directory 
+cd ~: to go to the home dir
+cd -: to go to the previous dir
+grep: it stands for "Global Regular Expression Print". It is used to search for specific words, patterns, or text inside files and command output.
+ls: To list the files & folders present in a path/directory
+ls -l: To list the files & folders in a long format(detailed information).
+ls -la: To list the hidden files and folders as well.
+ls -lS: To list the files based on size in desc.
+mv old_name new_name: Cmd to rename the file
+ls -lt: Cmd to list the files based on time(date) in desc
+ls -lh: Cmd to list the files as human readable.
+chmod: to change the permission for the files and folders(e.g. chmod 755 file/folder_name)
+chown: owner_name:group_name file_name: to change the owner of a file
+rm -r folder_name: Cmd to remove the file or folder
+cp source_file_name destination_file_name: to copy the source file to destination file
+vi file_name: to create a new file
+head file_name: it will print the first 10 lines of the file(10 is by default)
+tail file_name: it will print the last 10 lines of the file
+head -n 5 file_name: now, it will print the first 5 lines of the file
+umask: this cmd we can use to provide default permission by subtracting 022(by default) from the octal notation.(e.g. 777-022=755 will be new permission), here
+we can also set umask as user defined like umask 222, umask 266 etc. It can be use just to set a default permission.
+find: cmd to search files and directories
+du -h: cmd to disk usage and how much space is used by any file 
+df -h: this cmd will show the disk fragment means how many storage devices are attached. Like how many mount points are there in our system.
+top: cmd to check the cpu usage and all metrics like RAM, PIDs(process_id) in linux
+resmon: cmd to check CPU usage in windows.
+free -m: cmd to check free memory in the system.
+ps -aux: cmd to display all the running processess.
+ssh: to connect to any remote server securely
+curl: Used to send HTTP requests to URLs and receive responses. It is commonly used to test REST APIs, check websites, and troubleshoot ne/w connectivity.
+	  This cmd is most commonly used in linxu but it is a cmd line tool not specific a linux cmd.
+curl -o file_name.html url: this cmd will save the response of url in the file.
+curl -v url: It means the verbose.. it will provide the detailed information.
+tar -xvzf: it is the cmd to extract any archived(.gz, .zip) file.
+
+
+***Cmds after connecting to EC2***
+
+cmd to connect to EC2: ssh -i key_pair_name ec2-user@public_ipv4
+cat /etc/passwd: to check all the users created in linux
+sudo useradd "username": cmd to create a new user 
+sudo passwd username: cmd to create or set the password for a user
+su username: cmd to switch the user, if want to go to ec2-user again then run "exit" cmd
+
+Q) Where mount paths are stored in our system?
+Ans.  /etc/fstab
+
+Q) What issue you've worked in K8s and how you resolved/troubleshoot it?
+Ans. There was an application and after deploying it, it was running fine but was not accessible through UI. So after troubleshooting I found that the 
+issue was of istio ingress and virtual services which were not configured. So i implemented the ingress routing to resolve it.
+
+--> Suppose, we've a file placed in a EC2 server and we want to create multiple copies of that file then whenever we've to update any content or line
+then we've to update in all the copies of that file which we call as soft or hard link in ec2.
+
+-->Soft Link: if we are creating the softlink between the files and if we delete the source file then it will not work like the link will break. Soft
+link will consume more memory.
+-->Hard Link: if we are creating the hardlink between the files and if we delete the source file then it will work as it is and link will'nt break. Hard
+link will consume less memory.
+
+***IMP POINTS***
+
+1. To make any file hidden in linux, we can add "." at the start of the file_name. like ".file_name"(Same we can use for the folders as well)    
+2. The default and max permission for file is 666 and for directory it is 777.
+3. What is load avg? -- Avg of Last 1 min, last 5 min, last 15 min of CPU and memory usage which we get from TOP cmd.
+4. PID:- It is a process_id which every application holds uniquely. To kill any application we can use the PID to kill the process.
+5. In real world, the ping cmd will be disabled for security reasons. We can use telnet cmd in alternative.
+6. We can include !#bin/bash just to increase the readability for the system to tell like it is a bash file. It is not necessary.
+7. ".sh" is the extension for shell script in linux. 
+8. Absoulte Path:- The path from root directory and it will remain same.
+9. Relative Path:- The path from current working directory and it may vary based on src and dest folders.
+
+
+***PERMISSIONS***
+
+now, whenever we run ls or ls -l etc cmd, it will show the file name and details with the permission like below:
+
+r=read (read only)
+w=write (write and delete the file)
+x=execute (execute permission only)
+- = denied(no permissions granted)
+
+drwxr-xr-x 1 Kartik 197121  0 Oct  9 14:30 'coding practice'/
+
+Here, d at the start indicates that coding_practice is a directory
+
+rwxr-xr-x means permission which can be divided in three parts like below:
+rwx          r-x		 r-x   ---- Here, remember the values given are like r=4, w=2, and x=1 so,
+4+2+1		 4+1         4+1   = Sum is 755 --> In octal notation
+
+C:/Users/Kartik/Downloads
