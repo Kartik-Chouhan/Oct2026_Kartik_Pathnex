@@ -103,5 +103,3 @@ Here, d at the start indicates that coding_practice is a directory
 rwxr-xr-x means permission which can be divided in three parts like below:
 rwx          r-x		 r-x   ---- Here, remember the values given are like r=4, w=2, and x=1 so,
 4+2+1		 4+1         4+1   = Sum is 755 --> In octal notation
-
-C:/Users/Kartik/Downloads
