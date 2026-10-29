@@ -1,0 +1,3 @@
+learnt about helm chart - 3:09 hours 
+leanrt about CRD, init & sidecar container
+bitnami, helm chart flow
