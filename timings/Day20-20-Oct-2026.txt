@@ -1,0 +1,3 @@
+done interview question practice video 
+done mcq + theory questions/answers practice via chatgpt
+started AWS ArgoCD video
