@@ -36,10 +36,11 @@ tail file_name: it will print the last 10 lines of the file
 head -n 5 file_name: now, it will print the first 5 lines of the file
 umask: this cmd we can use to provide default permission by subtracting 022(by default) from the octal notation.(e.g. 777-022=755 will be new permission), here
 we can also set umask as user defined like umask 222, umask 266 etc. It can be use just to set a default permission.
-find: cmd to search files and directories
+find: cmd to search files and directories.
 du -h: cmd to disk usage and how much space is used by any file 
 df -h: this cmd will show the disk fragment means how many storage devices are attached. Like how many mount points are there in our system.
 top: cmd to check the cpu usage and all metrics like RAM, PIDs(process_id) in linux
+--> CPU usage can be more than 100% and even it can go upto 200% but based on the no. of cores in CPU.
 resmon: cmd to check CPU usage in windows.
 free -m: cmd to check free memory in the system.
 ps -aux: cmd to display all the running processess.
@@ -49,25 +50,24 @@ curl: Used to send HTTP requests to URLs and receive responses. It is commonly u
 curl -o file_name.html url: this cmd will save the response of url in the file.
 curl -v url: It means the verbose.. it will provide the detailed information.
 tar -xvzf: it is the cmd to extract any archived(.gz, .zip) file.
+cat file1 file2 > file3: This cmd will copy the content of file1 & file2 into file3.
+history: to check the recently used cmds
+sed: this is used to edit the text.
+awk: this is used to process the data.
+wc: It is used to count the number of lines, words, bytes and characters in a file or input.
+e.g. -- 10  50  300  filename.txt
+Here, 10 = number of lines
+	  50 = number of words
+	  300 = number of bytes
 
+shred -u file_name: It will permanently delete the file, like it will be difficult to recover.
+systemctl: to start/stop and check the status of the service in linux.
+crontab -l: to display the crontab jobs.
+Runlevels: Runlevels define the operating mode of a Linux system. Traditionally, Linux uses 7 runlevels (0–6).
 
-***Cmds after connecting to EC2***
-
-cmd to connect to EC2: ssh -i key_pair_name ec2-user@public_ipv4
-cat /etc/passwd: to check all the users created in linux
-sudo useradd "username": cmd to create a new user 
-sudo passwd username: cmd to create or set the password for a user
-su username: cmd to switch the user, if want to go to ec2-user again then run "exit" cmd
 
 Q) Where mount paths are stored in our system?
 Ans.  /etc/fstab
-
-Q) What issue you've worked in K8s and how you resolved/troubleshoot it?
-Ans. There was an application and after deploying it, it was running fine but was not accessible through UI. So after troubleshooting I found that the 
-issue was of istio ingress and virtual services which were not configured. So i implemented the ingress routing to resolve it.
-
---> Suppose, we've a file placed in a EC2 server and we want to create multiple copies of that file then whenever we've to update any content or line
-then we've to update in all the copies of that file which we call as soft or hard link in ec2.
 
 -->Soft Link: if we are creating the softlink between the files and if we delete the source file then it will not work like the link will break. Soft
 link will consume more memory.
@@ -83,13 +83,19 @@ link will consume less memory.
 5. In real world, the ping cmd will be disabled for security reasons. We can use telnet cmd in alternative.
 6. We can include !#bin/bash just to increase the readability for the system to tell like it is a bash file. It is not necessary.
 7. ".sh" is the extension for shell script in linux. 
-8. Absoulte Path:- The path from root directory and it will remain same.
-9. Relative Path:- The path from current working directory and it may vary based on src and dest folders.
+8. Absoulte Path:- The path from root directory and it will remain same.(Fixed path)
+9. Relative Path:- The path from current working directory and it may vary based on src and dest folders.(it is based on position)
+10. Inode:- This is a data about data index. It is around of size 2-3mb. Think of it as a file's identity card. 
+			It stores information about the file, but not its actual filename or content.
+
+11. wget: This is the cmd specific for files only. to download the files, resuming downloads etc.
+12. curl: This is the cmd we can use for API communication.
+13. yum: This is the cmd to install the packages in linux. For ubuntu, we can use apt.
 
 
 ***PERMISSIONS***
 
-now, whenever we run ls or ls -l etc cmd, it will show the file name and details with the permission like below:
+now, whenever we run ls or ls -l or ls-la, etc cmd, it will show the file name and details with the permission like below:
 
 r=read (read only)
 w=write (write and delete the file)
