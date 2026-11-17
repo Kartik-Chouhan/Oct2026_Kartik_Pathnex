@@ -1,0 +1,47 @@
+CAB: CAB is the short form of "Change Advisory Board". It is a group of stakeholders responsible for reviewing, assessing, and advising on 
+changes, especially production changes. helps evaluate the risk, impact, business justification, and implementation plan before a change 
+is approved.
+
+This board will finalize and will approve the production changes. Without the approval of board, not a single change can be performed in 
+real time development practices. Change refers to the modification whether it is a fix or a new implementation in the production. 
+
+What if we do any change in the production directly without the approval of CAB, then it can stop & bring the application down in the real 
+time environment(production). It will charge as the penalty if the service of client or customer will be stopped or down. Also, it will 
+breach the SLA(Service level agreement). 
+
+The members of CAB includes Change Manager, App owner, Development lead, DevOps release manager, Infr or cloud team, Security team, DBA,
+Business Owner.
+
+Now, to perform any change in the production, we've to raise a CR(change request) that will be approved by CAB first. It is generally a 
+JIRA ticket, which contains the details like change description, change title, assignees, reportes, approvers etc. It can include around 
+25-30 people. Each JIRA ticket will be having a number to uniquely identify the JIRA ticket. Each ticket will be having the status 
+as below:
+
+1. To be Planned
+2. In progress
+3. Waiting for the CAB approval
+4. Done (Completed)
+
+We can add internal note(comments) in the JIRA ticket to give any update on the ticket itself. This CR ticket has priorities like P1, P2, P3, P4 and P5 based on
+seveirity level of the impact on application in the production. 
+
+P1 -- critical
+P2 -- high
+P3 -- medium
+P4 -- low
+P5 -- plan(to be executed in future)
+
+Flow of CAB approval: 
+
+---> Planning --> Awaiting Manager Approval --> Awaiting CS(Customer service) approval --> Awaiting CAB approval --> awaiting implementation --> Done 
+
+Now, we should have a rollback plan in case if service will go down after performing the changes. It is usually the previous version of the 
+running application. Also, there are two imp terms related to CR: -
+
+1. Hot Freeze: During a Hot Freeze, regular deployments and planned changes are restricted, but emergency or critical changes may still be 
+			   permitted with special approval. 
+
+2. Cold Freeze: During a Cold Freeze, almost all production changes are stopped, including most planned deployments and routine maintenance.
+				Only exceptional, business-critical or emergency changes may be considered under strict authorization.
+
+*** PIR: Post implementation Review ***
